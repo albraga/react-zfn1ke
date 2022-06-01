@@ -9,7 +9,7 @@ const Lista = () => {
     { id: 3, desc: 'três', checked: false },
   ]);
   const hchange = id => {
-    setItems(items.map(item => item.id === id ? {...item, checked: !item.checked} : item))
+    setItems(items.map(item => (item.id === id ? {...item, checked: !item.checked} : item)))
   }
   return (
     <ListGroup variant="flush">
