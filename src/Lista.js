@@ -8,13 +8,15 @@ const Lista = () => {
     { id: 2, desc: 'dois', checked: true },
     { id: 3, desc: 'três', checked: false },
   ]);
-  const hchange = () => console.log('checked');
+  const hchange = id => {
+    setItems(items.map(item => item.id === id ? {...item, checked: !item.checked} : item))
+  }
   return (
     <ListGroup variant="flush">
       {items.map((item) => (
         <ListGroup.Item>
           {item.desc}
-          <input type="checkbox" checked={item.checked} onChange={hchange} />
+          <input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} />
             <FaBeer />
         </ListGroup.Item>
       ))}
