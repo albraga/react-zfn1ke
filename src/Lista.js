@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { FaBeer } from "@react-icons/all-files/fa/FaBeer"
+import React, { useState } from 'react';
+import { ListGroup } from 'react-bootstrap';
+import { FaBeer } from '@react-icons/all-files/fa/FaBeer';
 
 const Lista = () => {
   const [items, setItems] = useState([
@@ -9,15 +10,15 @@ const Lista = () => {
   ]);
   const hchange = () => console.log('checked');
   return (
-    <ul>
+    <ListGroup variant="flush">
       {items.map((item) => (
-        <li key={item.id}>
+        <ListGroup.Item>
           {item.desc}
           <input type="checkbox" checked={item.checked} onChange={hchange} />
-          <h3><FaBeer /></h3>
-        </li>
+            <FaBeer />
+        </ListGroup.Item>
       ))}
-    </ul>
+    </ListGroup>
   );
 };
 
