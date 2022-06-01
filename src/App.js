@@ -10,10 +10,12 @@ export default function App() {
   }
   return (
     <div>
-      <h6>{nome}</h6>
-      <button onClick={(e) => hclick(e)}>ok</button>
-      <Destructuring />
+
       <Lista />
     </div>
   )
 }
+
+/*      <h6>{nome}</h6>
+      <button onClick={(e) => hclick(e)}>ok</button>
+      <Destructuring />*/
