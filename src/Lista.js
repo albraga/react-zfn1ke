@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ListGroup } from 'react-bootstrap';
-import { FaBeer } from '@react-icons/all-files/fa/FaBeer';
+import { ListGroup, Stack } from 'react-bootstrap';
+import { FaTrashAlt } from '@react-icons/all-files/fa/FaTrashAlt';
 
 const Lista = () => {
   const [items, setItems] = useState([
@@ -15,9 +15,11 @@ const Lista = () => {
     <ListGroup variant="flush">
       {items.map((item) => (
         <ListGroup.Item>
-          {item.desc}
-          <input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} />
-            <FaBeer />
+          <Stack direction="horizontal" gap={3}>
+            <div className="bg-light border">{item.desc}</div>
+            <div className="bg-light border"><input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} /></div>
+            <div className="bg-light border  ms-auto"><FaTrashAlt /></div>
+          </Stack>          
         </ListGroup.Item>
       ))}
     </ListGroup>
