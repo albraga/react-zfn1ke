@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import Destructuring from './Destructuring';
 import Lista from './Lista';
+import {ThemeProvider, Container, Row, Col} from 'react-bootstrap'
 
 export default function App() {
   let [nome, setNome] = useState('braga');
@@ -9,10 +10,13 @@ export default function App() {
     setNome(e.target.innerText);
   }
   return (
-    <div>
-
-      <Lista />
-    </div>
+    <ThemeProvider  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>   
+      <Container fluid="md">
+        <Row>
+           <Col><Lista /></Col>
+        </Row>
+      </Container>
+    </ThemeProvider>
   )
 }
 

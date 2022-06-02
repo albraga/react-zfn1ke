@@ -12,7 +12,7 @@ const Lista = () => {
     setItems(items.map(item => (item.id === id ? {...item, checked: !item.checked} : item)))
   }
   return (
-    <ListGroup variant="flush">
+    <ListGroup>
       {items.map((item) => (
         <ListGroup.Item>
           <Stack direction="horizontal" gap={3}>
