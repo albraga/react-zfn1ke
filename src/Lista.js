@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ListGroup, Stack } from 'react-bootstrap';
+import { ListGroup, Stack, Alert } from 'react-bootstrap';
 import { FaTrashAlt } from '@react-icons/all-files/fa/FaTrashAlt';
 
 const Lista = () => {
@@ -15,6 +15,7 @@ const Lista = () => {
     setItems(items.filter(item => item.id !== id))
   }
   return (
+    items.length ? (
     <ListGroup>
       {items.map((item) => (
         <ListGroup.Item>
@@ -27,7 +28,10 @@ const Lista = () => {
         </ListGroup.Item>
       ))}
     </ListGroup>
-  );
-};
+    ) : <Alert key='info' variant='info'>
+          Your list is empty.
+        </Alert>
+  )
+}
 
 export default Lista;
