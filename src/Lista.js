@@ -16,8 +16,8 @@ const Lista = () => {
       {items.map((item) => (
         <ListGroup.Item>
           <Stack direction="horizontal" gap={3}>
-            <div className="bg-light border">{item.desc}</div>
-            <div className="bg-light border"><input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} /></div>
+            <div className="bg-light border "><input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} /></div>
+            <div className="bg-light border ">{item.desc}</div>
             <div className="bg-light border  ms-auto"><FaTrashAlt /></div>
           </Stack>          
         </ListGroup.Item>

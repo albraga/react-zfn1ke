@@ -11,7 +11,7 @@ export default function App() {
   }
   return (
     <ThemeProvider  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>   
-      <Container fluid="md">
+      <Container>
         <Row>
            <Col><Lista /></Col>
         </Row>
