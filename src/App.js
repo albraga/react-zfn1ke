@@ -6,6 +6,11 @@ import {ThemeProvider, Container, Row, Col} from 'react-bootstrap'
 import Header from './Header'
 
 export default function App() {
+  const [items, setItems] = useState([
+    { id: 1, desc: 'um', checked: true },
+    { id: 2, desc: 'dois', checked: true },
+    { id: 3, desc: 'três', checked: false },
+  ]);
   let [nome, setNome] = useState('braga');
   const hclick = (e) => {
     setNome(e.target.innerText);
@@ -17,7 +22,7 @@ export default function App() {
           <Header title={new Date().toLocaleDateString()}/>
         </Row>
         <Row>
-           <Col><Lista /></Col>
+           <Col><Lista items={items} setItems={setItems}/></Col>
         </Row>
       </Container>
     </ThemeProvider>

@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { ListGroup, Stack, Alert } from 'react-bootstrap';
 import { FaTrashAlt } from '@react-icons/all-files/fa/FaTrashAlt';
 
-const Lista = () => {
-  const [items, setItems] = useState([
-    { id: 1, desc: 'um', checked: true },
-    { id: 2, desc: 'dois', checked: true },
-    { id: 3, desc: 'três', checked: false },
-  ]);
+const Lista = ({setItems, items}) => {
+  
   const hchange = id => {
     setItems(items.map(item => (item.id === id ? {...item, checked: !item.checked} : item)))
   }
