@@ -3,6 +3,7 @@ import './style.css';
 import Destructuring from './Destructuring';
 import Lista from './Lista';
 import {ThemeProvider, Container, Row, Col} from 'react-bootstrap'
+import Header from './Header'
 
 export default function App() {
   let [nome, setNome] = useState('braga');
@@ -12,6 +13,9 @@ export default function App() {
   return (
     <ThemeProvider  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>   
       <Container>
+        <Row>
+          <Header title={new Date().toLocaleDateString()}/>
+        </Row>
         <Row>
            <Col><Lista /></Col>
         </Row>
