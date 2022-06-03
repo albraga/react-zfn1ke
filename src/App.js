@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './style.css';
 import Destructuring from './Destructuring';
 import Lista from './Lista';
-import {ThemeProvider, Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 import Header from './Header'
+import Footer from './Footer'
 
 export default function App() {
   const [items, setItems] = useState([
@@ -16,16 +17,17 @@ export default function App() {
     setNome(e.target.innerText);
   }
   return (
-    <ThemeProvider  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>   
+    <>  
       <Container>
         <Row>
           <Header title={new Date().toLocaleDateString()}/>
         </Row>
-        <Row>
+        <Row m>
            <Col><Lista items={items} setItems={setItems}/></Col>
         </Row>
       </Container>
-    </ThemeProvider>
+      <Footer length={items.length}/>
+    </>
   )
 }
 
