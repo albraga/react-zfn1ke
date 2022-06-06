@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Container, Nav, Col } from 'react-bootstrap';
 
-const Footer = ({length}) => {
-return <footer class="footer">
-<div class="container">
-  <span class="text-muted">{length}</span>
-</div>
-</footer>
-}
+const Footer = ({ length }) => {
+  return (
+    <div className="fixed-bottom justify-content-center">
 
-export default Footer
+        <div class="bg-primary text-white">{length}</div>
+
+    </div>
+  );
+};
+
+export default Footer;
+//<Container className="fixed-bottom">{length}</Container>
