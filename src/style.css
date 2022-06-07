@@ -6,3 +6,11 @@ p {
 .lbl {
   text-decoration: line-through;
 }
+
+.red:hover {
+  color: red;
+}
+
+.verde:hover {
+  color: green;
+}

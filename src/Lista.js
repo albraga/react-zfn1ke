@@ -17,7 +17,7 @@ const Lista = ({setItems, items}) => {
           <Stack direction="horizontal" gap={3}>
             <div className="bg-light border "><input type="checkbox" checked={item.checked} onChange={()=>hchange(item.id)} /></div>
             <div className="bg-light border"><label style={item.checked ? {textDecoration: 'line-through'} : null} onDoubleClick={() => hchange(item.id)}>{item.desc}</label></div>
-            <div className="bg-light border  ms-auto"><FaTrashAlt onClick={() => hdel(item.id)} role="button"/></div>
+            <div className="red bg-light border  ms-auto"><FaTrashAlt onClick={() => hdel(item.id)} role="button"/></div>
           </Stack>          
         </ListGroup.Item>
       ))}
