@@ -3,10 +3,12 @@ import { Container, Nav, Col } from 'react-bootstrap';
 
 const Footer = ({ length }) => {
   return (
-    <div className="fixed-bottom justify-content-center">
-
-        <div class="bg-primary text-white">{length}</div>
-
+    <div className="container fixed-bottom">
+      <div className="row">
+        <div className="col bg-primary text-white text-center">
+          {length}
+        </div>
+      </div>
     </div>
   );
 };
