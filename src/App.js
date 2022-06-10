@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Header from './Header'
 import Footer from './Footer'
 import AddItem from './AddItem'
+import TestAdd from './TestAdd'
 
 export default function App() {
   const [items, setItems] = useState([
@@ -45,7 +46,7 @@ export default function App() {
           </Row>
         </Container>
       </Container>
-      
+      <TestAdd />
       <Footer length={items.length} />
     </>
   );
