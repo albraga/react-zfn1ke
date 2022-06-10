@@ -7,6 +7,7 @@ import Header from './Header'
 import Footer from './Footer'
 import AddItem from './AddItem'
 import TestAdd from './TestAdd'
+import Search from './Search'
 
 export default function App() {
   const [items, setItems] = useState([
@@ -29,6 +30,7 @@ export default function App() {
   }
   return (
     <>
+    <Search />
       <Container className="p-1">
         <Container className="p-1 mb-5 bg-light rounded-3">
           <Row>
