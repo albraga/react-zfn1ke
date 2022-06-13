@@ -16,6 +16,8 @@ export default function App() {
     { id: 3, desc: 'três', checked: false },
   ])
 
+  const [search, setSearch] = useState('')
+
   const [newItem, setNewItem] = useState('')
 
   const addItem = item => {
@@ -30,7 +32,7 @@ export default function App() {
   }
   return (
     <>
-    <Search />
+    <Search search={search} setSearch={setSearch} />
       <Container className="p-1">
         <Container className="p-1 mb-5 bg-light rounded-3">
           <Row>
@@ -38,7 +40,13 @@ export default function App() {
           </Row>
           <Row>
             <Col>
-              <Lista items={items} setItems={setItems} />
+              <Lista setItems={setItems} items={
+                items.filter(
+                  item => ((item.desc).toLowerCase()).includes(
+                    search.toLowerCase()
+                    )
+                )
+              } />
             </Col>
           </Row>
           <Row>
